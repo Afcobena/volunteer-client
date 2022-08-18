@@ -1,5 +1,3 @@
-import { getNextKeyDef } from '@testing-library/user-event/dist/keyboard/getNextKeyDef'
-import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import AddForm from '../../components/AddForm'
@@ -12,15 +10,16 @@ function ProposalList() {
   const [allProposals, setAllProposals] = useState(null)
   const [isFetching, setIsFetching] = useState(true)
 
+
   useEffect(() => {
     getListOfProposals()
   }, [])
+
 
   const getListOfProposals = async () => {
 
     try {
 
-      /* axios.get("http://localhost:5005/api/proposal") */
       const response = await getProposalService()
       console.log("Respuesta Lista", response.data)
 

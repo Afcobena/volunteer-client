@@ -5,7 +5,7 @@ const service = axios.create({
 })
 
 const getProposalService = () => {
-    return service.get("/proposals")
+    return service.get("/proposal")
 }
 
 const getProposalDetailsService = (id) => {
