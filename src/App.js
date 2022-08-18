@@ -14,11 +14,18 @@ import NotFound from "./pages/NotFound"
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <nav>
+      <header>
+
+        <nav className='navbar'>
           <Navbar />
 
-          <Routes>
+        </nav>
+
+      </header>
+
+      <div>
+
+        <Routes>
 
             <Route path='/' element={<Home />} />
             <Route path='/proposals' element={<ProposalList />} />
@@ -33,13 +40,6 @@ function App() {
             <Route path='/' element={<NotFound />} />
 
           </Routes>
-
-
-
-        </nav>
-      </header>
-
-      <div>
 
       </div>
 
