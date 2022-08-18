@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar"
 import Home from "./pages/Home"
 import ProposalList from "./pages/proposals/ProposalList"
 import ProposalDetails from "./pages/proposals/ProposalDetails"
+import ProposalEdit from "./pages/proposals/ProposalEdit"
 import Signup from "./pages/auth/Signup"
 import Login from "./pages/auth/Login"
 import Profile from "./pages/auth/Profile"
@@ -30,14 +31,15 @@ function App() {
             <Route path='/' element={<Home />} />
             <Route path='/proposals' element={<ProposalList />} />
             <Route path='/proposal/:id/details' element={<ProposalDetails />} />
+            <Route path='/proposal/:id/edit' element={<ProposalEdit />} />
             <Route path='/signup' element={<Signup />} />
             <Route path='/login' element={<Login />} />
-            <Route path='/profile/:id' element={<Profile />} />
+            <Route path='/profile/' element={<Profile />} />
 
 
             {/* Error Handling */}
-            <Route path='/' element={<Error />} />
-            <Route path='/' element={<NotFound />} />
+            <Route path='/error' element={<Error />} />
+            <Route path='/*' element={<NotFound />} />
 
           </Routes>
 
