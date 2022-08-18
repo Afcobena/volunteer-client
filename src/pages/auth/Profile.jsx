@@ -1,15 +1,15 @@
 import React from 'react'
 
-function Error() {
+function Profile() {
   return (
     <div>
 
       <div>
-        <h2>ERROR</h2>
+        <h2>PROFILE</h2>
       </div>
     
     </div>
   )
 }
 
-export default Error
+export default Profile

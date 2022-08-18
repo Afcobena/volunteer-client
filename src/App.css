@@ -2,12 +2,25 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 1em;
 }
 
-@media (prefers-reduced-motion: no-preference) {
+.links {
+  text-decoration: none;
+  color: black;
+  font-size: 1em;
+  font-weight: 600;
+}
+
+
+/* -------------------Spin for Loading--------------------- */
+
+/* @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
@@ -35,4 +48,6 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
+
+/* -------------------Spin for Loading--------------------- */

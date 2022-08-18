@@ -1,15 +1,15 @@
 import React from 'react'
 
-function Error() {
+function Login() {
   return (
     <div>
 
       <div>
-        <h2>ERROR</h2>
+        <h2>LOGIN</h2>
       </div>
     
     </div>
   )
 }
 
-export default Error
+export default Login

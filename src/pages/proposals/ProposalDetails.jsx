@@ -1,15 +1,15 @@
 import React from 'react'
 
-function Error() {
+function ProposalDetails() {
   return (
     <div>
 
       <div>
-        <h2>ERROR</h2>
+        <h2>DETAILS</h2>
       </div>
     
     </div>
   )
 }
 
-export default Error
+export default ProposalDetails
