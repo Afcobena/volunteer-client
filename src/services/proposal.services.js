@@ -1,8 +1,5 @@
-import axios from 'axios'
+import service from "./config.services"
 
-const service = axios.create({
-    baseURL: "http://localhost:5005/api"
-})
 
 const getProposalService = () => {
     return service.get("/proposal")
@@ -13,7 +10,7 @@ const getProposalDetailsService = (id) => {
 }
 
 const addProposalService = (newProposal) => {
-    return service.post(`/proposal/${newProposal}`)
+    return service.post("/proposal", newProposal)
 }
 
 const deleteProposalService = (id) => {

@@ -47,44 +47,50 @@ function AddForm(props) {
 
     <div className="form-new-proposal">
 
-      {/* <form onSubmit={handleSubmit}> */}
-
-        <label htmlFor="date">Date: </label>
-        <input type="date" name="date" onChange={handleDateChange} value={date} />
+        <div className="date-add">
+          <label htmlFor="date">Date: </label>
+          <input type="date" name="date" onChange={handleDateChange} value={date} />
+        </div>
 
         <br />
 
-        <label htmlFor="title">Title: </label>
-        <input type="text" name="title" onChange={handleTitleChange} value={title} />
+        <div className="title-add">
+          <label htmlFor="title">Title: </label>
+          <input type="text" name="title" onChange={handleTitleChange} value={title} />
+        </div>
         
         <br />
 
-        <label htmlFor="category">Category: </label>
-        <select onChange={handleCategoryChange} value={category}>
+        <div className="category-add">
+          <label htmlFor="category">Category: </label>
+          <select onChange={handleCategoryChange} value={category}>
 
-        <option value="Ambiental">Ambiental</option>
-        <option value="Comunitario">Comunitario</option>
-        <option value="Cultural">Cultural</option>
-        <option value="Deportivo">Deportivo</option>
-        <option value="Educativo">Educativo</option>
-        <option value="Internacional">Internacional</option>
-        <option value="Ocio">Ocio</option>
-        <option value="ProtecciónCivil">Protección Civil</option>
-        <option value="SocioSanitario">Socio Sanitario</option>
-        <option value="Social">Social</option>
+          <option value="Ambiental">Ambiental</option>
+          <option value="Comunitario">Comunitario</option>
+          <option value="Cultural">Cultural</option>
+          <option value="Deportivo">Deportivo</option>
+          <option value="Educativo">Educativo</option>
+          <option value="Internacional">Internacional</option>
+          <option value="Ocio">Ocio</option>
+          <option value="Protección Civil">Protección Civil</option>
+          <option value="Socio Sanitario">Socio Sanitario</option>
+          <option value="Social">Social</option>
 
-        </select>
+          </select>
+        </div>
+        
+        <br />
+        
+        <div className="text-add">
+          <label htmlFor="text">Text: </label>
+          <input type="text" name="text" onChange={handleTextChange} value={text} />
+        </div>
         
         <br />
 
-        <label htmlFor="text">Text: </label>
-        <input type="text" name="text" onChange={handleTextChange} value={text} />
-        
-        <br />
-
-        <button onClick={handleSubmit}>Add</button>
-
-      {/* </form> */}
+        <div className="button-add">
+          <button onClick={handleSubmit}>Add</button>
+        </div>
 
     </div>
 
