@@ -1,12 +1,17 @@
 /* import axios from 'axios' */
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import {useContext} from 'react'
+
+import {AuthContext} from "../context/auth.context"
 
 import {addProposalService} from "../services/proposal.services"
 
 function AddForm(props) {
 
   const navigate = useNavigate()
+
+  const {isUserActive, /* isUserAdmin,  */authenticatedUser} = useContext(AuthContext)
 
   const [date, setDate] = useState("")
   const [title, setTitle] = useState("")
@@ -31,6 +36,7 @@ function AddForm(props) {
       /* axios.post("http://localhost:5005/api/proposal", newProposal) */
       await addProposalService(newProposal)
       props.getListOfProposals()
+      authenticatedUser()
       
     } catch (error) {
       navigate("/error")
@@ -38,7 +44,8 @@ function AddForm(props) {
 
   }
 
-  return (
+  if (isUserActive === true) {
+    return (
     <div>
 
     <div>
@@ -96,6 +103,13 @@ function AddForm(props) {
 
     </div>
   )
+  } else {
+    return (
+      <h4>Login to add a New Proposal</h4>
+    )
+  }
+
+  
 }
 
 export default AddForm

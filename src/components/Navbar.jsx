@@ -9,7 +9,7 @@ function Navbar() {
 
   const navigate = useNavigate()
 
-  const {isUserActive, isUserAdmin, authenticatedUser, user} = useContext(AuthContext)
+  const {isUserActive, /* isUserAdmin,  */authenticatedUser, user} = useContext(AuthContext)
 
   const handleLogout = () => {
     // destruir el token con removeItem de LocalStorage
@@ -34,16 +34,14 @@ function Navbar() {
 
         <div className='nav'>
           <Link className='links' to={"/"}>HOME</Link>
-          {/* <Link className='links' to={"/proposals"}>PROPOSALS</Link> */}
+          <Link className='links' to={"/proposals"}>PROPOSALS</Link>
           <Link className='links' to={"/signup"}>SIGN UP</Link>
           <Link className='links' to={"/login"}>LOGIN</Link>
-
         </div>
       
       </div>
-  )
+    )
   }
-
 
   
 }
