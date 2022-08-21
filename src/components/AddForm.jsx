@@ -1,5 +1,5 @@
 /* import axios from 'axios' */
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import {useContext} from 'react'
 
@@ -32,8 +32,8 @@ function AddForm(props) {
       category: category, 
       text: text,
     }
+    
     try {
-      /* axios.post("http://localhost:5005/api/proposal", newProposal) */
       await addProposalService(newProposal)
       props.getListOfProposals()
       authenticatedUser()

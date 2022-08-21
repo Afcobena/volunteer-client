@@ -1,47 +1,44 @@
+import axios from 'axios'
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import {useContext} from 'react'
 
 import {AuthContext} from "../context/auth.context"
 
-import {addProposalService} from "../services/proposal.services"
+/* import {} from "../services/proposal.services" */
 
 function Collaborate(props) {
 
   const navigate = useNavigate()
 
-  const {isUserActive, /* isUserAdmin,  */authenticatedUser} = useContext(AuthContext)
+  const {isUserActive, authenticatedUser} = useContext(AuthContext)
 
-  const [date, setDate] = useState("")
-  const [title, setTitle] = useState("")
   const [category, setCategory] = useState("")
   const [text, setText] = useState("")
 
-  const handleDateChange= (event) => setDate(event.target.value)
-  const handleTitleChange= (event) => setTitle(event.target.value)
   const handleCategoryChange= (event) => setCategory(event.target.value)
   const handleTextChange= (event) => setText(event.target.value)
 
 
   const handleSubmit = async () => {
 
-    const newProposal = {
-      date: date, 
-      title: title, 
+    const newCollaborate = {
       category: category, 
       text: text,
     }
     try {
-      /* axios.post("http://localhost:5005/api/proposal", newProposal) */
-      await addProposalService(newProposal)
-      props.getListOfProposals()
+
+      await axios.post("http://localhost:5005/api/collaborate", newCollaborate)
+      props.getDetails()
       authenticatedUser()
+      navigate("/proposals")
       
     } catch (error) {
       navigate("/error")
     }
 
   }
+  
 
   if (isUserActive === true) {
     return (
@@ -54,33 +51,25 @@ function Collaborate(props) {
     <div className="form-new-proposal">
 
         <div className="date-add">
-          <label htmlFor="date">Date: </label>
-          <input type="date" name="date" onChange={handleDateChange} value={date} />
+          
         </div>
 
-        <br />
-
-        <div className="title-add">
-          <label htmlFor="title">Title: </label>
-          <input type="text" name="title" onChange={handleTitleChange} value={title} />
-        </div>
-        
         <br />
 
         <div className="category-add">
           <label htmlFor="category">Category: </label>
           <select onChange={handleCategoryChange} value={category}>
 
-          <option value="Ambiental">Ambiental</option>
-          <option value="Comunitario">Comunitario</option>
-          <option value="Cultural">Cultural</option>
-          <option value="Deportivo">Deportivo</option>
-          <option value="Educativo">Educativo</option>
-          <option value="Internacional">Internacional</option>
-          <option value="Ocio">Ocio</option>
-          <option value="Protección Civil">Protección Civil</option>
-          <option value="Socio Sanitario">Socio Sanitario</option>
-          <option value="Social">Social</option>
+          <option value="General">General</option>
+          <option value="Logistica">Logistica</option>
+          <option value="Transporte">Transporte</option>
+          <option value="Mano de obra">Mano de obra</option>
+          <option value="Sanitarios">Sanitarios</option>
+          <option value="Seguridad">Seguridad</option>
+          <option value="Psicológicos">Psicológicos</option>
+          <option value="Comida Civil">Comida Civil</option>
+          <option value="Materiales">Materiales</option>
+          <option value="Dinero">Dinero</option>
 
           </select>
         </div>

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom'
+import Collaborate from '../../components/Collaborate'
 
 import {getProposalDetailsService, deleteProposalService} from "../../services/proposal.services"
 
@@ -79,6 +80,10 @@ function ProposalDetails() {
           <button onClick={handleDelete} width="200">Delete</button>
         </div>
 
+      </div>
+
+      <div>
+        <Collaborate getDetails={getDetails} />
       </div>
     
     </div>
