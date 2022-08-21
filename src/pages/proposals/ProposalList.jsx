@@ -56,9 +56,12 @@ function ProposalList() {
 
         {allProposals.map((eachProposal) => {
           return (
+            <div>
             <h3 key={eachProposal._id}>
               <Link to={`/proposal/${eachProposal._id}/details`} >{eachProposal.title}</Link>
             </h3>
+            <p>{eachProposal.owner}</p>
+            </div>
           )
         })}
 

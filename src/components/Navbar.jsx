@@ -9,7 +9,7 @@ function Navbar() {
 
   const navigate = useNavigate()
 
-  const {isUserActive, /* isUserAdmin,  */authenticatedUser, user} = useContext(AuthContext)
+  const {isUserActive, isUserAdmin, authenticatedUser, user} = useContext(AuthContext)
 
   const handleLogout = () => {
     // destruir el token con removeItem de LocalStorage
@@ -24,8 +24,9 @@ function Navbar() {
         <Link className='links' to={"/"}>HOME</Link>
         <Link className='links' to={"/proposals"}>PROPOSALS</Link>
         <button onClick={handleLogout}>Logout</button>
-        {<p>{user.email}</p>}
         {<p>{user.username}</p>}
+        {<p>{user.role}</p>}
+
       </div>
     )
   } else {
