@@ -1,13 +1,14 @@
-import axios from 'axios'
-import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import React, {useState} from 'react'
+import {useNavigate, useParams} from 'react-router-dom'
 import {useContext} from 'react'
 
 import {AuthContext} from "../context/auth.context"
 
-/* import {} from "../services/proposal.services" */
+import {addCollaborateService} from "../services/collaborate.services"
 
 function Collaborate(props) {
+
+  const {id} = useParams()
 
   const navigate = useNavigate()
 
@@ -28,7 +29,8 @@ function Collaborate(props) {
     }
     try {
 
-      await axios.post("http://localhost:5005/api/collaborate", newCollaborate)
+      const responseCreate = await addCollaborateService(id, newCollaborate)
+      console.log("Respuesta COLLABORA", responseCreate.data)
       props.getDetails()
       authenticatedUser()
       navigate("/proposals")
@@ -44,23 +46,17 @@ function Collaborate(props) {
     return (
     <div>
 
-    <div>
-      <h2>New Proposal</h2>
+    <div className='page-title'>
+      <h2>Collaborate ADD Form</h2>
     </div>
 
     <div className="form-new-proposal">
-
-        <div className="date-add">
-          
-        </div>
-
-        <br />
 
         <div className="category-add">
           <label htmlFor="category">Category: </label>
           <select onChange={handleCategoryChange} value={category}>
 
-          <option value="General">General</option>
+          <option selected value="General">General</option>
           <option value="Logistica">Logistica</option>
           <option value="Transporte">Transporte</option>
           <option value="Mano de obra">Mano de obra</option>

@@ -1,6 +1,6 @@
 /* import axios from 'axios' */
-import React, { useEffect, useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import React, {useState} from 'react'
+import {useNavigate} from 'react-router-dom'
 import {useContext} from 'react'
 
 import {AuthContext} from "../context/auth.context"
@@ -15,7 +15,7 @@ function AddForm(props) {
 
   const [date, setDate] = useState("")
   const [title, setTitle] = useState("")
-  const [category, setCategory] = useState("")
+  const [category, setCategory] = useState("Ambiental")
   const [text, setText] = useState("")
 
   const handleDateChange= (event) => setDate(event.target.value)
@@ -32,7 +32,7 @@ function AddForm(props) {
       category: category, 
       text: text,
     }
-    
+
     try {
       await addProposalService(newProposal)
       props.getListOfProposals()
@@ -48,7 +48,7 @@ function AddForm(props) {
     return (
     <div>
 
-    <div>
+    <div className='page-title'>
       <h2>New Proposal</h2>
     </div>
 
@@ -72,7 +72,7 @@ function AddForm(props) {
           <label htmlFor="category">Category: </label>
           <select onChange={handleCategoryChange} value={category}>
 
-          <option value="Ambiental">Ambiental</option>
+          <option selected value="Ambiental">Ambiental</option>
           <option value="Comunitario">Comunitario</option>
           <option value="Cultural">Cultural</option>
           <option value="Deportivo">Deportivo</option>

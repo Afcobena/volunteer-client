@@ -59,7 +59,7 @@ function ProposalDetails() {
     <div>
 
       <div>
-        <h2>DETAILS</h2>
+        <h2>PROPOSALS DETAILS</h2>
       </div>
 
       <div className='details-info'>

@@ -41,7 +41,7 @@ function ProposalList() {
   return (
     <div>
 
-      <div>
+      <div className='page-title'>
         <h2>PROPOSALS</h2>
       </div>
 
@@ -49,7 +49,7 @@ function ProposalList() {
         <AddForm getListOfProposals={getListOfProposals} />
       </div>
 
-      <h2>All Proposals</h2>
+      <h2>Proposals List</h2>
 
       <div className="proposal-list">
         
