@@ -33,6 +33,8 @@ function Collaborate(props) {
       console.log("Respuesta COLLABORA", responseCreate.data)
       props.getDetails()
       authenticatedUser()
+      setCategory("")
+      setText("")
       navigate("/proposals")
       
     } catch (error) {

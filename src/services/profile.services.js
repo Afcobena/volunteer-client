@@ -4,9 +4,12 @@ const getProfileService = () => {
     return service.get("/profile")
 }
 
+/* const getProfileService = (id) => {
+    return service.get(`/profile/${id}`)
+} */
+
 
 
 export {
-    getProfileService,
-    addProfileService
+    getProfileService
 }

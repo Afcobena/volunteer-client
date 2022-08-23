@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom'
 import Collaborate from '../../components/Collaborate'
+import CollaborationList from '../../components/CollaborationList'
+
 
 import {getProposalDetailsService, deleteProposalService} from "../../services/proposal.services"
 
@@ -21,7 +23,7 @@ function ProposalDetails() {
   const getDetails = async () => {
 
     try {
-      /* axios.get(`http://localhost:5005/api/proposal/${id}`) */
+
       const response = await getProposalDetailsService(id)
       console.log("Respuesta Details", response.data)
 
@@ -84,6 +86,10 @@ function ProposalDetails() {
 
       <div>
         <Collaborate getDetails={getDetails} />
+      </div>
+
+      <div>
+        <CollaborationList getDetails={getDetails} />
       </div>
     
     </div>

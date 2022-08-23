@@ -37,6 +37,10 @@ function AddForm(props) {
       await addProposalService(newProposal)
       props.getListOfProposals()
       authenticatedUser()
+      setDate("")
+      setTitle("")
+      setCategory("")
+      setText("")
       
     } catch (error) {
       navigate("/error")

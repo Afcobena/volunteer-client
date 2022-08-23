@@ -35,7 +35,6 @@ function ProposalList() {
     return <h4>...Loading...Loading...Loading...</h4>
   }
 
-  const {date, title, category, text, owner} = allProposals
 
 
   return (
@@ -57,6 +56,9 @@ function ProposalList() {
         {allProposals.map((eachProposal) => {
           return (
             <div>
+              <div className="card-image">
+                <img src="" alt="" />
+              </div>
             <h3 key={eachProposal._id}>
               <Link to={`/proposal/${eachProposal._id}/details`} >{eachProposal.title}</Link>
             </h3>

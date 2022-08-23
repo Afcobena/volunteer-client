@@ -26,6 +26,8 @@ function Navbar() {
         <button onClick={handleLogout}>Logout</button>
         {<p>{user.username}</p>}
         {<p>{user.role}</p>}
+        <Link className='links' to={"/profile"}>PROFILE</Link>
+
 
       </div>
     )

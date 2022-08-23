@@ -1,7 +1,7 @@
 import service from "./config.services"
 
-const getCollaborateService = () => {
-    return service.get("/collaborate")
+const getCollaborateDetailsService = (id) => {
+    return service.get(`/collaborate/${id}`)
 }
 
 const addCollaborateService = (id, newCollaborate) => {
@@ -10,6 +10,6 @@ const addCollaborateService = (id, newCollaborate) => {
 
 
 export {
-    getCollaborateService,
+    getCollaborateDetailsService,
     addCollaborateService
 }
