@@ -1,17 +1,17 @@
 import React, {useEffect, useState} from 'react'
 import {Link, useNavigate} from 'react-router-dom'
 import {useContext} from 'react'
-import CollaborationList from '../../components/CollaborationList'
 
 import {AuthContext} from "../../context/auth.context"
 
-import {getProfileService, getProfileCollabsService} from "../../services/profile.services"
+import {getProfileService/* , getProfileCollabsService */} from "../../services/profile.services"
+import UserCollabList from '../../components/UserCollabList'
 
 function Profile() {
 
     const navigate = useNavigate()
     const [allUserProposals, setAllUserProposals] = useState(null)
-    const [allUserCollaborates, setAllUserCollaborates] = useState(null)
+/*     const [allUserCollaborates, setAllUserCollaborates] = useState(null) */
     const [isFetching, setIsFetching] = useState(true)
 
     const {isUserActive, isUserAdmin, authenticatedUser, user} = useContext(AuthContext)
@@ -19,7 +19,7 @@ function Profile() {
     console.log("ESTO QUE EHH", allUserProposals)
     useEffect(() => {
       getUserProposals()
-      getUserCollaborates()
+/*       getUserCollaborates() */
     }, [])
 
 
@@ -37,7 +37,7 @@ function Profile() {
     }
   }
 
-  const getUserCollaborates = async () => {
+/*   const getUserCollaborates = async () => {
 
     try {
       const response = await getProfileCollabsService()
@@ -48,7 +48,7 @@ function Profile() {
     } catch (error) {
       navigate("/error")
     }
-  }
+  } */
 
   if (isFetching === true) {
     return <h4>...Loading...Loading...Loading...</h4>
@@ -87,10 +87,6 @@ if (isUserActive === true) {
                 <div className="prof-proposal-date">
                   <p>{eachProposal.date}</p>
                 </div>
-
-                <div className="prof-proposal-title">
-                  <p>{eachProposal.title}</p>
-                </div>
               
               </div>
 
@@ -102,6 +98,10 @@ if (isUserActive === true) {
 
       <div className='prof-collabs-list-title'>
         <h2>Tus Collaboraciones</h2>
+      </div>
+
+      <div>
+        <UserCollabList />
       </div>
 
 {/*       <div className="proposal-list">

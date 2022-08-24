@@ -17,6 +17,7 @@ function AddForm(props) {
   const [title, setTitle] = useState("")
   const [category, setCategory] = useState("Ambiental")
   const [text, setText] = useState("")
+  // condicional con el useState de la imagen para que salga la que yo quiero
 
   const handleDateChange= (event) => setDate(event.target.value)
   const handleTitleChange= (event) => setTitle(event.target.value)

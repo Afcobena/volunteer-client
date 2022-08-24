@@ -1,3 +1,4 @@
+import userEvent from '@testing-library/user-event'
 import React, { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import AddForm from '../../components/AddForm'
@@ -31,10 +32,11 @@ function ProposalList() {
     }
   }
 
+
+
   if (isFetching === true) {
     return <h4>...Loading...Loading...Loading...</h4>
   }
-
 
 
   return (
@@ -55,15 +57,18 @@ function ProposalList() {
 
         {allProposals.map((eachProposal) => {
           return (
+            
             <div>
+
               <div className="card-image">
                 <img src="" alt="" />
               </div>
             <h3 key={eachProposal._id}>
               <Link to={`/proposal/${eachProposal._id}/details`} >{eachProposal.title}</Link>
             </h3>
-            <p>{eachProposal.owner}</p>
+
             </div>
+
           )
         })}
 

@@ -5,7 +5,15 @@ const getProfileService = () => {
 }
 
 const getProfileCollabsService = () => {
-    return service.get("/profile")
+    return service.get("/profile/collaborates")
+}
+
+const deleteProfileProposallService = (id) => {
+    return service.delete(`/proposal/${id}`)
+}
+
+const updateProfileProposalService = (id, updateProposal) => {
+    return service.patch(`/proposal/${id}`, updateProposal)
 }
 
 
