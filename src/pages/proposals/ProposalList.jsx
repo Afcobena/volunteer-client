@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import AddForm from '../../components/AddForm'
-/* import SearchBar from '../../components/SearchBar'
- */
 
 import {getProposalService} from "../../services/proposal.services"
 
