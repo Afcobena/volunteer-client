@@ -54,7 +54,7 @@ function Collaborate(props) {
 
     <div className="collabotation-list">
 
-      <div>
+      <div className='comments'>
           <h2>COLLABORATIONS</h2>
         </div>
 
@@ -62,11 +62,23 @@ function Collaborate(props) {
         
         {allCollabs.map((eachCollab) => {
             return (
-                <div>
-                    <p>{eachCollab.category}</p>
-                    <p>{eachCollab.text}</p>
-                    <p>{eachCollab.owner}</p>
+
+              <div className='all-comments-collab'>
+
+                <div className="all-comments-username">
+                  <h3 className="all-coms-user">{eachCollab.owner.username}</h3>
                 </div>
+
+                <div className="all-comments-text">
+                  <p className="all-coms-text">{eachCollab.text}</p>
+                </div>
+
+                <div className="all-comments-category">
+                  <p className="all-coms-text-cat">{eachCollab.category}</p>
+                </div>
+
+
+              </div>
             )
         })}
 

@@ -51,37 +51,37 @@ function Login() {
 
 
   return (
-    <div>
+    <div className='page-title'>
 
       <div>
         <h2>LOGIN</h2>
       </div>
 
-      <div>
+      <div className='login-form-card'>
 
-        <form onSubmit={handleLogin}>
+        <form className='login-page-form' onSubmit={handleLogin}>
 
-        <div className="email">
-          <label htmlFor="email">Email: </label>
-          <input type="email" name="email" onChange={handleEmailChange} value={email} />
+        <div className="login-email">
+          <label className='sign-label-em' htmlFor="email">Email: </label>
+          <input className='sign-input' type="email" name="email" onChange={handleEmailChange} value={email} />
         </div>
         
         <br />
 
-        <div className="password">
-          <label htmlFor="password">Password: </label>
-          <input type="password" name="password" onChange={handlePasswordChange} value={password} />
+        <div className="login-password">
+          <label className='sign-label-ps' htmlFor="password">Password: </label>
+          <input className='sign-input' type="password" name="password" onChange={handlePasswordChange} value={password} />
         </div>
         
         <br />
 
-        <div className="erros-messg-signup">
+        <div className="error-messg-login">
           {errorMessage ? <p>{errorMessage}</p> : null}
         </div>
         <br />
 
-        <div className="button-signup">
-          <button>Login</button>
+        <div className="login-button">
+          <button className='login-btn'><span>Login</span></button>
         </div>
 
       </form>

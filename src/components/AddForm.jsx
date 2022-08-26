@@ -15,9 +15,9 @@ function AddForm(props) {
 
   const [date, setDate] = useState("")
   const [title, setTitle] = useState("")
-  const [category, setCategory] = useState("Ambiental")
+  const [category, setCategory] = useState("")
   const [text, setText] = useState("")
-  // condicional con el useState de la imagen para que salga la que yo quiero
+
 
   const handleDateChange= (event) => setDate(event.target.value)
   const handleTitleChange= (event) => setTitle(event.target.value)
@@ -51,60 +51,65 @@ function AddForm(props) {
 
   if (isUserActive === true) {
     return (
-    <div>
+    <div className='addform-page'>
 
-    <div className='page-title'>
-      <h2>New Proposal</h2>
-    </div>
+      <div className='page-title'>
+        <h2>New Proposal</h2>
+      </div>
 
-    <div className="form-new-proposal">
+      <div className="addform-card">
 
-        <div className="date-add">
-          <label htmlFor="date">Date: </label>
-          <input type="date" name="date" onChange={handleDateChange} value={date} />
+        <div className="form-new-proposal">
+
+          <div className="date-add">
+            <label className='addform-label-dat' htmlFor="date">Date: </label>
+            <input className='addform-input' type="date" name="date" onChange={handleDateChange} value={date} />
+          </div>
+
+          <br />
+
+          <div className="title-add">
+            <label className='addform-label-ttl' htmlFor="title">Title: </label>
+            <input className='addform-input' type="text" name="title" onChange={handleTitleChange} value={title} />
+          </div>
+          
+          <br />
+
+          <div className="category-add">
+            <label className='addform-label-cat' htmlFor="category">Category: </label>
+            <select className='addform-input' onChange={handleCategoryChange} value={category}>
+            <option value="Seleccional">Selecciona</option>
+
+            <option value="Ambiental">Ambiental</option>
+            <option value="Comunitario">Comunitario</option>
+            <option value="Cultural">Cultural</option>
+            <option value="Deportivo">Deportivo</option>
+            <option value="Educativo">Educativo</option>
+            <option value="Internacional">Internacional</option>
+            <option value="Ocio">Ocio</option>
+            <option value="Protección Civil">Protección Civil</option>
+            <option value="Socio Sanitario">Socio Sanitario</option>
+            <option value="Social">Social</option>
+
+            </select>
+          </div>
+          
+          <br />
+          
+          <div className="text-add">
+            <label className='addform-label-txt' htmlFor="text">Text: </label>
+            <input className='addform-input' type="text" name="text" onChange={handleTextChange} value={text} />
+          </div>
+          
+          <br />
+
+          <div className="button-add">
+            <button className='btn-add' onClick={handleSubmit}>Add</button>
+          </div>
+
         </div>
 
-        <br />
-
-        <div className="title-add">
-          <label htmlFor="title">Title: </label>
-          <input type="text" name="title" onChange={handleTitleChange} value={title} />
-        </div>
-        
-        <br />
-
-        <div className="category-add">
-          <label htmlFor="category">Category: </label>
-          <select onChange={handleCategoryChange} value={category}>
-
-          <option selected value="Ambiental">Ambiental</option>
-          <option value="Comunitario">Comunitario</option>
-          <option value="Cultural">Cultural</option>
-          <option value="Deportivo">Deportivo</option>
-          <option value="Educativo">Educativo</option>
-          <option value="Internacional">Internacional</option>
-          <option value="Ocio">Ocio</option>
-          <option value="Protección Civil">Protección Civil</option>
-          <option value="Socio Sanitario">Socio Sanitario</option>
-          <option value="Social">Social</option>
-
-          </select>
-        </div>
-        
-        <br />
-        
-        <div className="text-add">
-          <label htmlFor="text">Text: </label>
-          <input type="text" name="text" onChange={handleTextChange} value={text} />
-        </div>
-        
-        <br />
-
-        <div className="button-add">
-          <button onClick={handleSubmit}>Add</button>
-        </div>
-
-    </div>
+      </div>
 
     </div>
   )

@@ -91,7 +91,7 @@ function ProposalDetails() {
         </div>
 
         <div className="details-owner">
-        <p>{owner}</p>
+        <p>{owner.username}</p>
         </div>
 
       </div>
@@ -99,11 +99,11 @@ function ProposalDetails() {
       <div className="buttons">
 
         <div className="btn-edit">
-        {user._id == detailsProposal.owner ? <Link to={`/proposal/${detailsProposal._id}/edit`}><button>Edit</button></Link> : null}
+        {user._id == detailsProposal.owner._id ? <Link to={`/proposal/${detailsProposal._id}/edit`}><button>Edit</button></Link> : null}
         </div>
 
         <div className="btn-delete">
-          {user._id == detailsProposal.owner ? <button onClick={handleDelete} width="200">Delete</button> : null}
+          {user._id == detailsProposal.owner._id ? <button onClick={handleDelete} width="200">Delete</button> : null}
         </div>
 
       </div>

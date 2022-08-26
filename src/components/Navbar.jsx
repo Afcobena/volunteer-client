@@ -24,8 +24,7 @@ function Navbar() {
         <Link className='links' to={"/"}>HOME</Link>
         <Link className='links' to={"/proposals"}>PROPOSALS</Link>
         <button onClick={handleLogout}>Logout</button>
-        {<p>{user.username}</p>}
-        {<p>{user.role}</p>}
+
         <Link className='links' to={"/profile"}>PROFILE</Link>
 
 

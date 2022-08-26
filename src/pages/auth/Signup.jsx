@@ -44,44 +44,41 @@ function Signup() {
 
 
   return (
-    <div>
+    <div className='page-title'>
 
-      <div>
+      <div className='signup-title'>
         <h2>SIGN UP</h2>
       </div>
 
-      <div>
+      <div className='signup-form-card'>
 
-        <form onSubmit={handleSignup}>
+        <form className='signup-page-form' onSubmit={handleSignup}>
 
         <div className="username">
-          <label htmlFor="username">Username: </label>
-          <input type="text" name="username" onChange={handleUsernameChange} value={username} />
+          <label className='sign-label-us' htmlFor="username">Username: </label>
+          <input className='sign-input' type="text" name="username" onChange={handleUsernameChange} value={username} />
         </div>
 
-        <br />
 
-        <div className="email">
-          <label htmlFor="email">Email: </label>
-          <input type="email" name="email" onChange={handleEmailChange} value={email} />
-        </div>
-        
-        <br />
-
-        <div className="password">
-          <label htmlFor="password">Password: </label>
-          <input type="password" name="password" onChange={handlePasswordChange} value={password} />
+        <div className="sign-email">
+          <label className='sign-label-em' htmlFor="email">Email: </label>
+          <input className='sign-input' type="email" name="email" onChange={handleEmailChange} value={email} />
         </div>
         
-        <br />
+
+        <div className="sign-password">
+          <label className='sign-label-ps' htmlFor="password">Password: </label>
+          <input className='sign-input' type="password" name="password" onChange={handlePasswordChange} value={password} />
+        </div>
+        
 
         <div className="erros-messg-signup">
           {errorMessage ? <p>{errorMessage}</p> : null}
         </div>
-        <br />
 
-        <div className="button-signup">
-          <button>Sign Up</button>
+
+        <div className="signup-button">
+          <button className='sign-btn'><span>Sign Up</span></button>
         </div>
 
       </form>

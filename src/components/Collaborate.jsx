@@ -46,46 +46,45 @@ function Collaborate(props) {
 
   if (isUserActive === true) {
     return (
-    <div>
-
     <div className='page-title'>
-      <h2>Collaborate ADD Form</h2>
-    </div>
 
-    <div className="form-new-proposal">
+      <div className='collab-title'>
+        <h2>Participa</h2>
+      </div>
 
-        <div className="category-add">
-          <label htmlFor="category">Category: </label>
-          <select onChange={handleCategoryChange} value={category}>
+      <div className="form-new-proposal">
 
-          <option selected value="General">General</option>
-          <option value="Logistica">Logistica</option>
-          <option value="Transporte">Transporte</option>
-          <option value="Mano de obra">Mano de obra</option>
-          <option value="Sanitarios">Sanitarios</option>
-          <option value="Seguridad">Seguridad</option>
-          <option value="Psicológicos">Psicológicos</option>
-          <option value="Comida Civil">Comida Civil</option>
-          <option value="Materiales">Materiales</option>
-          <option value="Dinero">Dinero</option>
+          <div className="category-add">
+            <label className='addform-label-cat' htmlFor="category">Category: </label>
+            <select className='addform-input' onChange={handleCategoryChange} value={category}>
 
-          </select>
-        </div>
-        
-        <br />
-        
-        <div className="text-add">
-          <label htmlFor="text">Text: </label>
-          <input type="text" name="text" onChange={handleTextChange} value={text} />
-        </div>
-        
-        <br />
+            <option value="Selecciona">Selecciona</option>
+            <option selected value="General">General</option>
+            <option value="Logistica">Logistica</option>
+            <option value="Transporte">Transporte</option>
+            <option value="Mano de obra">Mano de obra</option>
+            <option value="Sanitarios">Sanitarios</option>
+            <option value="Seguridad">Seguridad</option>
+            <option value="Psicológicos">Psicológicos</option>
+            <option value="Comida Civil">Comida Civil</option>
+            <option value="Materiales">Materiales</option>
+            <option value="Dinero">Dinero</option>
 
-        <div className="button-add">
-          <button onClick={handleSubmit}>Add</button>
-        </div>
+            </select>
+          </div>
+          
+          
+          <div className="text-add">
+            <label className='addform-label-cat' htmlFor="text">Text: </label>
+            <input className='addform-input' type="text" name="text" onChange={handleTextChange} value={text} />
+          </div>
+          
 
-    </div>
+          <div className="button-add">
+            <button className='btn-add' onClick={handleSubmit}>Add</button>
+          </div>
+
+      </div>
 
     </div>
   )
