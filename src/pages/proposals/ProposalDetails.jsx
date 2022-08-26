@@ -66,44 +66,47 @@ function ProposalDetails() {
   console.log("AQUI QUE HAY en el otro", user._id)
 
   return (
-    <div>
+    <div className='profile-card'>
 
-      <div>
-        <h2>PROPOSALS DETAILS</h2>
-      </div>
+      <div className="proposal-list">
 
-      <div className='details-info'>
-
-        <div className="details-proposal">
-        <p>{date}</p>
+        <div className='page-title'>
+          <h2>PROPOSALS DETAILS</h2>
         </div>
 
-        <div className="details-title">
-        <h3>{title}</h3>
-        </div>
+        <div className='prof-proposals-card'>
 
-        <div className="details-category">
-        <h5>{category}</h5>
-        </div>
+          <div className="details-proposal">
+          <p>{date}</p>
+          </div>
 
-        <div className="details-text">
-        <p>{text}</p>
-        </div>
+          <div className="details-title">
+          <h3>{title}</h3>
+          </div>
 
-        <div className="details-owner">
-        <p>{owner.username}</p>
-        </div>
+          <div className="details-category">
+          <h5>{category}</h5>
+          </div>
 
+          <div className="details-text">
+          <p>{text}</p>
+          </div>
+
+          <div className="details-owner">
+          <p>{owner.username}</p>
+          </div>
+
+        </div>
       </div>
 
       <div className="buttons">
 
-        <div className="btn-edit">
-        {user._id == detailsProposal.owner._id ? <Link to={`/proposal/${detailsProposal._id}/edit`}><button>Edit</button></Link> : null}
+        <div className="signup-button">
+        {user._id == detailsProposal.owner._id ? <Link to={`/proposal/${detailsProposal._id}/edit`}><button className='sign-btn'>Edit</button></Link> : null}
         </div>
 
-        <div className="btn-delete">
-          {user._id == detailsProposal.owner._id ? <button onClick={handleDelete} width="200">Delete</button> : null}
+        <div className="signup-button">
+          {user._id == detailsProposal.owner._id ? <button className='sign-btn' onClick={handleDelete} width="200">Delete</button> : null}
         </div>
 
       </div>

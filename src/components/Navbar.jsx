@@ -23,9 +23,12 @@ function Navbar() {
       <div className='nav'>
         <Link className='links' to={"/"}>HOME</Link>
         <Link className='links' to={"/proposals"}>PROPOSALS</Link>
-        <button onClick={handleLogout}>Logout</button>
 
         <Link className='links' to={"/profile"}>PROFILE</Link>
+
+        <div className="signup-button">
+        <button className='sign-btn' onClick={handleLogout}>Logout</button>
+        </div>
 
 
       </div>

@@ -97,49 +97,12 @@ if (isUserActive === true) {
       </div>
 
       <div className='prof-collabs-list-title'>
-        <h2>Tus Collaboraciones</h2>
+        <h3>Tus Collaboraciones</h3>
       </div>
 
       <div>
         <UserCollabList />
       </div>
-
-{/*       <div className="proposal-list">
-        
-        {allUserCollaborates.map((eachProposal) => {
-          return (
-
-              <div className='prof-proposals-card'>
-                
-                <div className="prof-proposal-details">
-                  <h3 key={eachProposal._id}>
-                    <Link to={`/proposal/${eachProposal._id}/details`} >{eachProposal.title}</Link>
-                  </h3>
-                </div>
-
-                <div className="prof-proposal-category">
-                  <p>{eachProposal.category}</p>
-                </div>
-
-                <div className="prof-proposal-date">
-                  <p>{eachProposal.date}</p>
-                </div>
-
-                <div className="prof-proposal-title">
-                  <p>{eachProposal.title}</p>
-                </div>
-              
-              </div>
-
-            
-          )
-        })}
-
-      </div> */}
-
-      {/* <div className="forumlario">
-        <CollaborationList  />
-      </div> */}
     
     </div>
   )

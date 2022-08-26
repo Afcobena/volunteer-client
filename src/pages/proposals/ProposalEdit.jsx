@@ -40,47 +40,53 @@ function ProposalEdit() {
 
 
   return (
-    <div>
-        <div>
-            <h2>Edit</h2>
+    <div className='page-title'>
+
+        <div className='collab-title'>
+            <h2>Editar</h2>
         </div>
 
-        <div>
+        <div className="form-new-proposal">
 
-        <label htmlFor="date">Date: </label>
-        <input type="date" name="date" onChange={handleDateChange} value={date} />
+          <div className="category-add">
+            <label className='addform-label-cat' htmlFor="date">Date: </label>
+            <input className='addform-input' type="date" name="date" onChange={handleDateChange} value={date} />
+          </div>
+          
+          <div className="category-add">
+            <label className='addform-label-cat' htmlFor="title">Title: </label>
+            <input className='addform-input' type="text" name="title" onChange={handleTitleChange} value={title} />
+          </div>
+          
+          <div className="category-add">
+            <label className='addform-label-cat' htmlFor="category">Category: </label>
+            <select className='addform-input' onChange={handleCategoryChange} value={category}>
 
-        <br />
+            <option value="Selecciona">Selecciona</option>
+            <option value="Ambiental">Ambiental</option>
+            <option value="Comunitario">Comunitario</option>
+            <option value="Cultural">Cultural</option>
+            <option value="Deportivo">Deportivo</option>
+            <option value="Educativo">Educativo</option>
+            <option value="Internacional">Internacional</option>
+            <option value="Ocio">Ocio</option>
+            <option value="ProtecciónCivil">Protección Civil</option>
+            <option value="SocioSanitario">Socio Sanitario</option>
+            <option value="Social">Social</option>
 
-        <label htmlFor="title">Title: </label>
-        <input type="text" name="title" onChange={handleTitleChange} value={title} />
-        
-        <br />
-
-        <label htmlFor="category">Category: </label>
-        <select onChange={handleCategoryChange} value={category}>
-
-        <option value="Ambiental">Ambiental</option>
-        <option value="Comunitario">Comunitario</option>
-        <option value="Cultural">Cultural</option>
-        <option value="Deportivo">Deportivo</option>
-        <option value="Educativo">Educativo</option>
-        <option value="Internacional">Internacional</option>
-        <option value="Ocio">Ocio</option>
-        <option value="ProtecciónCivil">Protección Civil</option>
-        <option value="SocioSanitario">Socio Sanitario</option>
-        <option value="Social">Social</option>
-
-        </select>
-        
-        <br />
-
-        <label htmlFor="text">Text: </label>
-        <input type="text" name="text" onChange={handleTextChange} value={text} />
-        
-        <br />
-
-        <button onClick={handleEdit}>Add</button>
+            </select>
+          </div>
+          
+          
+          <div className="text-add">
+            <label className='addform-label-cat' htmlFor="text">Text: </label>
+            <input className='addform-input' type="text" name="text" onChange={handleTextChange} value={text} />
+          </div>
+          
+          
+          <div className="button-add">
+            <button className='btn-add' onClick={handleEdit}>Add</button>
+          </div>
 
         </div>
     </div>
