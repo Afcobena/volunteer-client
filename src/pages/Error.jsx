@@ -8,7 +8,7 @@ function Error() {
 
       <div className='error'>
         <h2>ERROR</h2>
-        <p>Parece que estás más perdido que un burro en un garage... <br /> vuelve a <Link to={"/"} >Home</Link> oara seguir navegando.</p>
+        <p>Parece que estás más perdido que un burro en un garage... <br /> vuelve a <Link to={"/"} >Home</Link> para seguir navegando.</p>
 
         <img src={Burroimgg} alt="" />
       </div>

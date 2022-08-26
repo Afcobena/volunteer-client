@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import Ambiental from "../assets/imagessrc/Ambiental.webp"
 
 function Home() {
   return (
@@ -28,7 +29,8 @@ function Home() {
                 <div className="hex">
                   <div className="hexIn">
                     <Link className="hexLink" to={'/proposals'}>
-                      <img src="https://votingaccessforall.org/wp-content/uploads/2022/02/volunteer.jpg" alt="" />
+                      {/* <Ambiental /> */}
+                      <img src="https://votingaccessforall.org/wp-content/uploads/2022/02/volunteer.jpg" alt="ambiental" />
                       <h1>Ambiental</h1>
                       <p>Luchamos por replantar zonas maltratadas por los incendios.</p>
                     </Link>
