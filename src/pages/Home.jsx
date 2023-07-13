@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import Ambiental from "../assets/imagessrc/Ambiental.webp"
 
 function Home() {
   return (
@@ -9,14 +8,6 @@ function Home() {
       <div className='page-title'>
         <h2>Bienvenidos a Volunteer</h2>
       </div>
-
-      {/* https://img.freepik.com/free-vector/people-volunteering-donating-money_53876-66112.jpg?w=2000" */}
-
-      {/* https://votingaccessforall.org/wp-content/uploads/2022/02/volunteer.jpg */}
-
-      {/* https://longbeachgrange.org/wp-content/uploads/2020/02/19.jpg */}
-
-      {/* https://tuality.org/wp-content/uploads/2019/01/volunteer_hero_image_03.jpg */}
 
 
       <div className='home-cards'>
@@ -29,7 +20,6 @@ function Home() {
                 <div className="hex">
                   <div className="hexIn">
                     <Link className="hexLink" to={'/proposals'}>
-                      {/* <Ambiental /> */}
                       <img src="https://votingaccessforall.org/wp-content/uploads/2022/02/volunteer.jpg" alt="ambiental" />
                       <h1>Ambiental</h1>
                       <p>Luchamos por replantar zonas maltratadas por los incendios.</p>
@@ -292,92 +282,3 @@ function Home() {
 }
 
 export default Home
-
-
-
-/* import userEvent from '@testing-library/user-event'
-import React, { useEffect, useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
-import AddForm from '../../components/AddForm'
-
-import {getProposalService} from "../../services/proposal.services" */
-
-/* import {handleImg} from "../../utils/selectImgCategory" */
-
-/* function ProposalList() {
-
-  const navigate = useNavigate()
-  const [allProposals, setAllProposals] = useState(null)
-  const [isFetching, setIsFetching] = useState(true)
-
-
-  useEffect(() => {
-    getListOfProposals()
-  }, [])
-
-
-  const getListOfProposals = async () => {
-
-    try { 
-
-      const response = await getProposalService()
-      console.log("Respuesta Lista", response.data)
-
-      setAllProposals(response.data)
-      setIsFetching(false)
-      
-    } catch (error) {
-      navigate("/error")
-    }
-  }
-
-
-  if (isFetching === true) {
-    return <h4>...Loading...Loading...Loading...</h4>
-  }
-
-
-
-  return (
-    <div>
-
-      <div className='page-title'>
-        <h2>PROPOSALS</h2>
-      </div>
-
-      <div className="forumlario">
-        <AddForm getListOfProposals={getListOfProposals} />
-      </div>
-
-      <h2>Proposals List</h2>
-
-      <div className="proposal-list">
-        
-
-        {allProposals.map((eachProposal) => {
-          return (
-            <div> */
-              {/* <div className="card-image">
-                <img src={() => handleImg(eachProposal.category)} alt="" />
-              </div> */}
-            {/* <h3 key={eachProposal._id}>
-              <Link to={`/proposal/${eachProposal._id}/details`} >{eachProposal.title}</Link>
-              <p>{eachProposal.owner}</p>
-            </h3>
-            
-
-            </div>
-
-
-            
-          )
-        })}
-
-        
-      </div>
-    
-    </div>
-  )
-}
-
-export default ProposalList */}

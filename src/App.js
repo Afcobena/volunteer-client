@@ -1,15 +1,16 @@
-import './App.css';
+/* import './App.css'; */
+import './styles/styles.scss'
 import { Route, Routes } from 'react-router-dom';
-import Navbar from "./components/Navbar"
+import Navbar from "./components/navigation/navbar/Navbar"
 import Home from "./pages/Home"
-import ProposalList from "./pages/proposals/ProposalList"
-import ProposalDetails from "./pages/proposals/ProposalDetails"
-import ProposalEdit from "./pages/proposals/ProposalEdit"
-import Signup from "./pages/auth/Signup"
-import Login from "./pages/auth/Login"
-import Profile from "./pages/auth/Profile"
-import Error from "./pages/Error"
-import NotFound from "./pages/NotFound"
+import ProposalList from "./pages/proposals/proposalList/ProposalList"
+import ProposalDetails from "./pages/proposals/proposalDetails/ProposalDetails"
+import ProposalEdit from "./pages/proposals/proposalEdit/ProposalEdit"
+import Signup from "./pages/auth/signUp/Signup"
+import Login from "./pages/auth/login/Login"
+import Profile from "./pages/auth/profile/Profile"
+import Error from "./pages/errors/error/Error"
+import NotFound from "./pages/errors/notFound/NotFound"
 
 
 function App() {

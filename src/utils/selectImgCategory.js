@@ -18,9 +18,6 @@ const handleImg = (category) => {
     } else if (category === "Educativo") {
         return "images/Volunteer-Educativo.jpeg";
         
-    } else if (category === "Internacional") {
-        return "images/Volunteer-Internacional.jpeg";
-        
     } else if (category === "Ocio") {
         return "images/Volunteer-Ocio-Tiempo-Libre.jpeg";
         

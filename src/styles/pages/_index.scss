@@ -1,0 +1,23 @@
+// AboutUs page
+@forward '../../pages/about/AboutUs.scss';
+
+// Auth pages
+@forward '../../pages/auth/login/Login.scss';
+@forward '../../pages/auth/profile/Profile.scss';
+@forward '../../pages/auth/signUp/Signup.scss';
+
+// Contact page
+@forward '../../pages/contact/Contact.scss';
+
+// Errors pages
+@forward '../../pages/errors/error/Error.scss';
+@forward '../../pages/errors/notFound/NotFound.scss';
+
+// Proposals pages
+@forward '../../pages/proposals/proposalDetails/ProposalDetails.scss';
+@forward '../../pages/proposals/proposalEdit/ProposalEdit.scss';
+@forward '../../pages/proposals/proposalList/ProposalList.scss';
+
+
+
+
