@@ -9,7 +9,7 @@ function Navbar() {
 
   const navigate = useNavigate()
 
-  const {isUserActive, isUserAdmin, authenticatedUser, user} = useContext(AuthContext)
+  const {isUserActive, authenticatedUser, isUserAdmin, user} = useContext(AuthContext)
 
   const handleLogout = () => {
     // destruir el token con removeItem de LocalStorage

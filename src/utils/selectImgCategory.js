@@ -3,31 +3,31 @@
 
 const handleImg = (category) => { 
 
-    if (category === "Ambiental") {
+    if (category === "Environmental") {
         return "images/Volunteer-Educativo.jpeg";
         
-    } else if (category === "Comunitario") {
+    } else if (category === "Community") {
         return "images/Volunteer-Comunitario.jpeg";
         
     } else if (category === "Cultural") {
         return "images/Volunteer-Cultural.jpeg";
         
-    } else if (category === "Deportivo") {
+    } else if (category === "Sports") {
         return "images/Volunteer-Deportivo.jpeg";
         
-    } else if (category === "Educativo") {
+    } else if (category === "Educational") {
         return "images/Volunteer-Educativo.jpeg";
         
-    } else if (category === "Ocio") {
+    } else if (category === "Leisure") {
         return "images/Volunteer-Ocio-Tiempo-Libre.jpeg";
         
-    } else if (category === "Protección Civil") {
+    } else if (category === "Civil Protection") {
         return "images/Volunteer-Protección-Civil.jpeg";
         
-    } else if (category === "Socio Sanitario") {
+    } else if (category === "Social Healthcare") {
         return "images/Volunteer-Socio Sanitario.jpeg";
         
-    } else if (category === "Social") {
+    } else if (category === "Social Events") {
         return "images/Volunteer-Social.jpeg";
         
     }
