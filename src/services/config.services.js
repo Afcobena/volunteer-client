@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const service = axios.create({
-    baseURL: `${process.env.REACT_APP_SERVER_URL}`
+    baseURL: "https://volunteer-server-afcobena.vercel.app/api" /* `${process.env.REACT_APP_SERVER_URL    }` */
 })
 
 //interceptor: interceptar laa llamada y agregar el token
