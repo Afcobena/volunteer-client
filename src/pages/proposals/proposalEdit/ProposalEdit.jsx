@@ -43,7 +43,7 @@ function ProposalEdit() {
     <div className='page-title'>
 
         <div className='collab-title'>
-            <h2>Editar</h2>
+            <h2>Edit</h2>
         </div>
 
         <div className="form-new-proposal">
