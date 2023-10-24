@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const service = axios.create({
-    baseURL: `${process.env.REACT_APP_SERVER_URL    }`,
+    baseURL: `${process.env.REACT_APP_SERVER_URL}/auth`,
     /* withCredentials: true, */
 })
 
@@ -19,7 +19,7 @@ service.interceptors.request.use((config) => {
     }
 
     return config
-}) 
+})
 // al poner el interceptor en config y exportarlo a los demás services, ahora siempre les estaré pasando el Token.
 
 export default service
